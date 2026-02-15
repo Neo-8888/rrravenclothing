@@ -1,20 +1,18 @@
 {
   "version": 2,
-  "functions": {
-    "server.js": {
-      "includeFiles": [
-        "*.html",
-        "Css_Assets/**",
-        "Javascript_Assets/**",
-        "Image_Assets/**",
-        "data/**"
-      ]
-    }
-  },
   "builds": [
     {
       "src": "server.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "*.html",
+          "Css_Assets/**",
+          "Javascript_Assets/**",
+          "Image_Assets/**",
+          "data/**"
+        ]
+      }
     }
   ],
   "routes": [
