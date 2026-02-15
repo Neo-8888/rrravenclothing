@@ -10,12 +10,18 @@ const app = express();
 const port = Number(process.env.PORT || 3000);
 const rootDir = __dirname;
 const ordersFile = path.join(rootDir, "data", "orders.json");
+const isVercel = Boolean(process.env.VERCEL);
+let inMemoryOrders = [];
 
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
 const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null;
 
 const readOrders = async () => {
+    if (isVercel) {
+        return inMemoryOrders;
+    }
+
     try {
         const raw = await fs.readFile(ordersFile, "utf8");
         const parsed = JSON.parse(raw);
@@ -26,6 +32,11 @@ const readOrders = async () => {
 };
 
 const writeOrders = async (orders) => {
+    if (isVercel) {
+        inMemoryOrders = Array.isArray(orders) ? orders : [];
+        return false;
+    }
+
     try {
         await fs.mkdir(path.dirname(ordersFile), { recursive: true });
         await fs.writeFile(ordersFile, JSON.stringify(orders, null, 2));
@@ -71,7 +82,10 @@ app.post("/api/webhooks/stripe", express.raw({ type: "application/json" }), asyn
         const existing = await readOrders();
         const withoutCurrent = existing.filter((entry) => entry.id !== order.id);
         withoutCurrent.unshift(order);
-        await writeOrders(withoutCurrent);
+        const persisted = await writeOrders(withoutCurrent);
+        if (!persisted && isVercel) {
+            console.warn("Order stored in memory only. Configure a database for persistent order history on Vercel.");
+        }
 
         console.log(`Paid order: ${order.id} (${order.customerEmail || "no-email"})`);
     }
@@ -154,6 +168,13 @@ app.get("/api/checkout-session/:id", async (req, res) => {
 });
 
 app.get("/api/orders", async (_req, res) => {
+    if (isVercel) {
+        return res.status(503).json({
+            orders: inMemoryOrders,
+            warning: "Persistent order storage is unavailable on Vercel without a database."
+        });
+    }
+
     const orders = await readOrders();
     return res.json({ orders });
 });
@@ -165,7 +186,7 @@ app.get("/", (_req, res) => {
 });
 
 // Vercel serverless expects the Express app to be exported.
-if (process.env.VERCEL) {
+if (isVercel) {
     module.exports = app;
 } else {
     app.listen(port, () => {
