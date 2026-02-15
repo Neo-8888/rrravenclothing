@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "functions": {
+    "server.js": {
+      "includeFiles": [
+        "*.html",
+        "Css_Assets/**",
+        "Javascript_Assets/**",
+        "Image_Assets/**",
+        "data/**"
+      ]
+    }
+  },
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ]
+}

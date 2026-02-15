@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Emotional Erased</title>
+    <link rel="stylesheet" href="Css_Assets/myfirststyle.css">
+    <link rel="stylesheet" href="Css_Assets/checkout.css">
+</head>
+<body class="page-checkout" data-checkout-page>
+    <header class="checkout-header">
+        <nav class="navbar">
+            <a class="brand" href="index.html" aria-label="Emotional Erased home">
+                <img src="Image_Assets/emotion erased logo.jpeg" alt="Emotional Erased logo" class="brand-logo">
+                <span>Emotional Erased</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-target="checkout-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-tabs" id="checkout-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About-Us.html">About</a></li>
+                <li><a href="collections.html">Shop</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="checkout-main">
+        <section class="checkout-grid">
+            <div class="checkout-card">
+                <h1>Secure Checkout</h1>
+                <p class="checkout-note">You will be redirected to Stripe to pay with card securely.</p>
+
+                <form id="paymentForm" class="payment-form" novalidate>
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+
+                    <button type="submit" id="payNowButton" class="pay-btn">Continue to Secure Payment</button>
+                    <p class="payment-status" id="paymentStatus" aria-live="polite"></p>
+                </form>
+            </div>
+
+            <aside class="summary-card">
+                <h2>Order Summary</h2>
+                <div class="summary-items" data-checkout-items></div>
+                <div class="summary-row">
+                    <span>Total</span>
+                    <strong data-checkout-total>R0</strong>
+                </div>
+                <a href="collections.html" class="back-link">Back to cart</a>
+            </aside>
+        </section>
+    </main>
+
+    <script src="Javascript_Assets/main.js"></script>
+</body>
+</html>

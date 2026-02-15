@@ -1,0 +1,129 @@
+.page-checkout {
+    background: #0f0f0f;
+    color: #f0f0f0;
+    min-height: 100vh;
+}
+
+.checkout-main {
+    max-width: 1180px;
+    margin: 1.5rem auto 3rem;
+    padding: 0 1rem;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 1rem;
+}
+
+.checkout-card,
+.summary-card {
+    background: #121212;
+    border: 1px solid #262626;
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+.checkout-card h1,
+.summary-card h2 {
+    margin: 0;
+}
+
+.checkout-note {
+    margin: 0.5rem 0 1rem;
+    color: #b9b9b9;
+}
+
+.payment-form {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.payment-form label {
+    font-size: 0.9rem;
+    color: #d4d4d4;
+}
+
+.payment-form input {
+    border: 1px solid #353535;
+    border-radius: 8px;
+    background: #0f0f0f;
+    color: #f3f3f3;
+    padding: 0.65rem 0.75rem;
+}
+
+.pay-btn {
+    margin-top: 0.6rem;
+    border: none;
+    border-radius: 8px;
+    background: #f1f1f1;
+    color: #111;
+    font-weight: 700;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+.pay-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.payment-status {
+    min-height: 1.1rem;
+    font-size: 0.9rem;
+    color: #cecece;
+}
+
+.payment-status.error {
+    color: #f87171;
+}
+
+.payment-status.success {
+    color: #4ade80;
+}
+
+.summary-items {
+    margin-top: 0.9rem;
+    display: grid;
+    gap: 0.55rem;
+}
+
+.summary-item {
+    border: 1px solid #292929;
+    border-radius: 10px;
+    padding: 0.65rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.summary-item-name {
+    color: #ececec;
+}
+
+.summary-item-price {
+    color: #c8c8c8;
+    white-space: nowrap;
+}
+
+.summary-row {
+    margin-top: 1rem;
+    border-top: 1px solid #272727;
+    padding-top: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #d6d6d6;
+    text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+}

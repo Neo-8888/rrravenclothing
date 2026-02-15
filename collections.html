@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | Emotional Erased</title>
+    <link rel="stylesheet" href="Css_Assets/myfirststyle.css">
+    <link rel="stylesheet" href="Css_Assets/collections.css">
+</head>
+<body class="page-collections">
+
+    <!-- Header -->
+    <header class="about-header">
+        <nav class="navbar">
+            <a class="brand" href="index.html" aria-label="Emotional Erased home">
+                <img src="Image_Assets/emotion erased logo.jpeg" alt="Emotional Erased logo" class="brand-logo">
+                <span>Emotional Erased</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-target="collections-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-tabs" id="collections-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About-Us.html">About</a></li>
+                <li><a href="collections.html" class="active">Shop</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search -->
+    <div class="simple-search">
+        <input type="text" placeholder="Search collection..." class="search-input" aria-label="Search products">
+        <button type="button" class="cart-trigger" aria-label="Open cart">
+            Cart <span class="cart-count" data-cart-count>0</span>
+        </button>
+    </div>
+
+    <!-- Categories -->
+    <div class="simple-categories">
+        <button class="cat-btn active" data-filter="all">All</button>
+        <button class="cat-btn" data-filter="tees">Tees</button>
+        <button class="cat-btn" data-filter="hoodies">Hoodies</button>
+        <button class="cat-btn" data-filter="jackets">Jackets</button>
+        <button class="cat-btn" data-filter="pants">Pants</button>
+        <button class="cat-btn" data-filter="headwear">Headwear</button>
+        <button class="cat-btn" data-filter="accessories">Accessories</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+        
+        <!-- Product 1 -->
+        <div class="product-box" data-category="tees">
+            <div class="product-img">
+                <img src="Image_Assets/T-shirt.png" alt="Silent Scream Tee">
+            </div>
+            <div class="product-info">
+                <h4>Silent Scream Tee</h4>
+                <p>Premium cotton emotional tee</p>
+                <div class="price">R949</div>
+                <button class="buy-btn" type="button" data-product="Silent Scream Tee" data-price="949">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-box" data-category="hoodies">
+            <div class="product-img">
+                <img src="Image_Assets/jersey.png" alt="Comfort Void Hoodie">
+            </div>
+            <div class="product-info">
+                <h4>Comfort Void Hoodie</h4>
+                <p>Heavyweight fleece hoodie</p>
+                <div class="price">R1699</div>
+                <button class="buy-btn" type="button" data-product="Comfort Void Hoodie" data-price="1699">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-box" data-category="jackets">
+            <div class="product-img">
+                <img src="Image_Assets/collage.png" alt="Armored Heart Jacket">
+            </div>
+            <div class="product-info">
+                <h4>Armored Heart Jacket</h4>
+                <p>Water-resistant jacket</p>
+                <div class="price">R2399</div>
+                <button class="buy-btn" type="button" data-product="Armored Heart Jacket" data-price="2399">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-box" data-category="pants">
+            <div class="product-img">
+                <img src="Image_Assets/pants.jpeg" alt="Urban Shadow Pants">
+            </div>
+            <div class="product-info">
+                <h4>Urban Shadow Pants</h4>
+                <p>Technical fabric pants</p>
+                <div class="price">R1899</div>
+                <button class="buy-btn" type="button" data-product="Urban Shadow Pants" data-price="1899">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-box" data-category="headwear">
+            <div class="product-img">
+                <img src="Image_Assets/caps.jpeg" alt="Echo Silence Cap">
+            </div>
+            <div class="product-info">
+                <h4>Echo Silence Cap</h4>
+                <p>Structured emotional cap</p>
+                <div class="price">R749</div>
+                <button class="buy-btn" type="button" data-product="Echo Silence Cap" data-price="749">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-box" data-category="accessories">
+            <div class="product-img">
+                <img src="Image_Assets/sec canva.jpeg" alt="Emotional Carry Bag">
+            </div>
+            <div class="product-info">
+                <h4>Emotional Carry Bag</h4>
+                <p>Canvas tote with accents</p>
+                <div class="price">R1099</div>
+                <button class="buy-btn" type="button" data-product="Emotional Carry Bag" data-price="1099">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button type="button" class="cart-close" data-close-cart aria-label="Close cart">x</button>
+        </div>
+        <div class="cart-items" data-cart-items></div>
+        <div class="cart-empty" data-cart-empty>Your cart is empty.</div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong data-cart-total>R0</strong>
+            </div>
+            <button type="button" class="checkout-btn" data-cart-checkout>Proceed to Checkout</button>
+        </div>
+    </aside>
+    <div class="cart-overlay" data-cart-overlay hidden></div>
+    <div class="cart-toast" data-cart-toast role="status" aria-live="polite"></div>
+
+      <!-- Footer -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <!-- Brand Info Column -->
+            <div class="footer-column">
+                <h3 class="footer-brand">Emotional Erased</h3>
+                <p class="footer-tagline">Expressed Through Threads</p>
+                <p class="footer-description">
+                    Crafting emotional expressions through wearable art since 2023. 
+                    Where fashion meets feeling, and every stitch tells a story.
+                </p>
+                <div class="footer-hours">
+                    <p><strong>Online Store:</strong> 24/7</p>
+                    <p><strong>Customer Support:</strong> Mon-Sat, 9AM-6PM EST</p>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About-Us.html">About Us</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Collections Column -->
+            <div class="footer-column">
+                <h4 class="footer-title">Collections</h4>
+                <ul class="footer-links">
+                    <li><a href="tees.html">Statement Tees</a></li>
+                    <li><a href="hoodies.html">Emotion Hoodies</a></li>
+                    <li><a href="jackets.html">Utility Jackets</a></li>
+                    <li><a href="pants.html">Urban Pants</a></li>
+                    <li><a href="headwear.html">Headwear</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-column">
+                <h4 class="footer-title">Contact Us</h4>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <p>123 Fashion District<br>New York, NY 10001</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <p>info@emotionalerased.com</p>
+                    </div>
+                </div>
+                
+                <div class="newsletter">
+                    <h5>Stay Connected</h5>
+                    <p>Get updates on new drops and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="copyright">
+                    © 2024 Emotional Erased. All rights reserved.<br>
+                    Crafted with emotion and served with purpose.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/emotionserased?igsh=MXhybDZkZW8ycHIyaQ==" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <circle cx="12" cy="12" r="4.5"/>
+                            <circle cx="18" cy="6" r="1"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="TikTok">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="Javascript_Assets/main.js"></script>
+</body>
+</html>
+
+
+
+

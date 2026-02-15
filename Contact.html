@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Emotional Erased</title>
+    <link rel="stylesheet" href="Css_Assets/myfirststyle.css">
+    <link rel="stylesheet" href="Css_Assets/contact.css">
+</head>
+<body class="page-contact">
+
+    <!-- Header with same navigation -->
+    <header class="contact-header">
+        <nav class="navbar">
+            <a class="brand" href="index.html" aria-label="Emotional Erased home">
+                <img src="Image_Assets/emotion erased logo.jpeg" alt="Emotional Erased logo" class="brand-logo">
+                <span>Emotional Erased</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-target="contact-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-tabs" id="contact-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About-Us.html">About</a></li>
+                <li><a href="collections.html">Shop</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1 class="contact-hero-title">Connect With Raven</h1>
+            <p class="contact-hero-subtitle">Every message is read with intention</p>
+        </div>
+    </section>
+
+    <!-- Contact Main -->
+    <main class="contact-main">
+        <div class="contact-container">
+            
+            <!-- Left Column: Emotional Form -->
+            <div class="contact-form-section">
+                <div class="form-intro">
+                    <h2>Share Your Emotional Journey</h2>
+                    <p>Each piece begins with a feeling. Share yours with us.</p>
+                </div>
+                
+                <form class="emotional-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="How you wish to be addressed">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Where emotions find reply">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emotion">Current Emotional State</label>
+                        <select id="emotion" name="emotion" required>
+                            <option value="" disabled selected>Select your emotional landscape</option>
+                            <option value="inspired">Inspired & Curious</option>
+                            <option value="reflective">Reflective & Thoughtful</option>
+                            <option value="anxious">Anxious & Seeking Comfort</option>
+                            <option value="playful">Playful & Experimental</option>
+                            <option value="melancholy">Melancholy & Introspective</option>
+                            <option value="hopeful">Hopeful & Visionary</option>
+                            <option value="other">Other (describe below)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Emotional Narrative</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell us your story, your vision, your emotional journey..."></textarea>
+                    </div>
+                    
+                    <div class="form-footer">
+                        <p class="response-promise">Raven personally reads and responds to every message within 48 hours.</p>
+                        <button type="submit" class="submit-btn">Send Emotional Thread</button>
+                        <div class="contact-map-block">
+                            <h3 class="contact-map-title">Studio Location</h3>
+                            <div class="contact-map-frame">
+                                <iframe
+                                    src="https://maps.google.com/maps?q=165%20Visagie%20Street%20Pretoria&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                    loading="lazy"
+                                    allowfullscreen
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Map for 165 Visagie Street Pretoria"
+                                ></iframe>
+                            </div>
+                            <a
+                                class="contact-map-link"
+                                href="https://maps.google.com/?q=165%20Visagie%20Street%20Pretoria"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Open in Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Column: Direct Connection -->
+            <div class="contact-details-section">
+                <div class="contact-card">
+                    <div class="contact-card-icon">📍</div>
+                    <h3>Raven's Studio</h3>
+                    <div class="contact-address">
+                        <p>165 Visagie Street</p>
+                        <p>Pretoria</p>
+                    </div>
+                    <p class="contact-note">Visits by appointment only</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-icon">📞</div>
+                    <h3>For Immediate Conversations</h3>
+                    <div class="contact-phone">
+                        <p>+27 73 019 8185</p>
+                    </div>
+                    <p class="contact-note">Available Tuesday-Friday, 10AM-4PM EST</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-icon">✉️</div>
+                    <h3>For Quick Thoughts</h3>
+                    <div class="contact-email">
+                        <p>raven@emotionalerased.com</p>
+                    </div>
+                    <p class="contact-note">Emotions welcomed, judgment suspended</p>
+                </div>
+                
+                <div class="studio-hours">
+                    <h4>Studio Hours</h4>
+                    <div class="hours-grid">
+                        <div class="hours-day">Tuesday</div>
+                        <div class="hours-time">10AM - 6PM</div>
+                        
+                        <div class="hours-day">Wednesday</div>
+                        <div class="hours-time">10AM - 6PM</div>
+                        
+                        <div class="hours-day">Thursday</div>
+                        <div class="hours-time">10AM - 6PM</div>
+                        
+                        <div class="hours-day">Friday</div>
+                        <div class="hours-time">10AM - 4PM</div>
+                        
+                        <div class="hours-day">Weekend</div>
+                        <div class="hours-time">By appointment</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Same Footer as Homepage -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <!-- Brand Info Column -->
+            <div class="footer-column">
+                <h3 class="footer-brand">Emotional Erased</h3>
+                <p class="footer-tagline">Expressed Through Threads</p>
+                <p class="footer-description">
+                    Crafting emotional expressions through wearable art since 2023. 
+                    Where fashion meets feeling, and every stitch tells a story.
+                </p>
+                <div class="footer-hours">
+                    <p><strong>Online Store:</strong> 24/7</p>
+                    <p><strong>Customer Support:</strong> Mon-Sat, 9AM-6PM EST</p>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About-Us.html">About Us</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Collections Column -->
+            <div class="footer-column">
+                <h4 class="footer-title">Collections</h4>
+                <ul class="footer-links">
+                    <li><a href="tees.html">Statement Tees</a></li>
+                    <li><a href="hoodies.html">Emotion Hoodies</a></li>
+                    <li><a href="jackets.html">Utility Jackets</a></li>
+                    <li><a href="pants.html">Urban Pants</a></li>
+                    <li><a href="headwear.html">Headwear</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-column">
+                <h4 class="footer-title">Stay Connected</h4>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <p>165 Visagie Street<br>Pretoria</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <p>+27 73 019 8185</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <p>raven@emotionalerased.com</p>
+                    </div>
+                </div>
+                
+                <div class="newsletter">
+                    <h5>Emotional Updates</h5>
+                    <p>Receive first access to new emotional collections.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your emotional inbox" required>
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="copyright">
+                    © 2024 Emotional Erased. All rights reserved.<br>
+                    Crafted with emotion and served with purpose.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/emotionserased?igsh=MXhybDZkZW8ycHIyaQ==" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <circle cx="12" cy="12" r="4.5"/>
+                            <circle cx="18" cy="6" r="1"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="TikTok">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Javascript_Assets/main.js"></script>
+</body>
+</html>
+

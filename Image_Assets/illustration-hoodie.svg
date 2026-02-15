@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Illustrated hoodie concept">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090909"/>
+      <stop offset="100%" stop-color="#220a0a"/>
+    </linearGradient>
+    <linearGradient id="hoodie" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#343434"/>
+      <stop offset="100%" stop-color="#131313"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg2)"/>
+  <rect x="0" y="620" width="800" height="180" fill="#000" fill-opacity=".26"/>
+  <circle cx="95" cy="140" r="110" fill="#ffe600" fill-opacity=".12"/>
+  <g transform="translate(150,90)">
+    <path d="M140 210c6-90 56-160 150-160s144 70 150 160l76 38-48 96-42-24v330H216V320l-40 24-50-96z" fill="url(#hoodie)" stroke="#ff2d2d" stroke-width="10"/>
+    <path d="M290 50q-70 35-72 111h145q-2-76-73-111z" fill="#1b1b1b" stroke="#ffe600" stroke-width="7"/>
+    <path d="M292 162v488" stroke="#ffe600" stroke-width="5" stroke-dasharray="10 12"/>
+    <rect x="246" y="360" width="90" height="58" rx="12" fill="#101010" stroke="#ff2d2d" stroke-width="5"/>
+    <path d="M226 250c40 26 92 26 132 0" fill="none" stroke="#ffe600" stroke-width="6"/>
+    <text x="292" y="396" text-anchor="middle" fill="#ffe600" font-family="Trebuchet MS, Arial, sans-serif" font-size="26" letter-spacing="2">RAVEN</text>
+  </g>
+</svg>

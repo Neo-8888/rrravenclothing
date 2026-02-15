@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Illustrated jacket concept">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080808"/>
+      <stop offset="100%" stop-color="#170404"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#383838"/>
+      <stop offset="100%" stop-color="#111"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg3)"/>
+  <circle cx="680" cy="630" r="170" fill="#ff2d2d" fill-opacity=".13"/>
+  <g transform="translate(135,90)">
+    <path d="M210 40h120l120 100 70 180-82 36-28-60v356H170V296l-28 60-82-36 70-180z" fill="url(#jacket)" stroke="#ff2d2d" stroke-width="10"/>
+    <path d="M270 40v612M330 40v612" stroke="#ffe600" stroke-width="5" stroke-dasharray="8 10"/>
+    <rect x="184" y="360" width="88" height="122" rx="11" fill="#141414" stroke="#ffe600" stroke-width="5"/>
+    <rect x="328" y="360" width="88" height="122" rx="11" fill="#141414" stroke="#ffe600" stroke-width="5"/>
+    <path d="M210 182h120m0 0h120" stroke="#ff2d2d" stroke-width="8"/>
+    <text x="270" y="442" text-anchor="middle" fill="#ffe600" font-family="Trebuchet MS, Arial, sans-serif" font-size="24">HEART</text>
+    <text x="372" y="442" text-anchor="middle" fill="#ffe600" font-family="Trebuchet MS, Arial, sans-serif" font-size="24">SHIELD</text>
+  </g>
+</svg>
